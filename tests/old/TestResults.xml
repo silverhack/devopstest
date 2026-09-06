@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="146" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2026-08-17" time="17:27:55">
+  <environment clr-version="10.0.9" cwd="C:\GitHubCopilot\monkey365_redesign\monkey365" user-domain="DESKTOP-FB19O1D" machine-name="DESKTOP-FB19O1D" user="silverhack" nunit-version="2.5.8.0" os-version="10.0.26200" platform="Microsoft Windows 11 Pro|C:\WINDOWS|\Device\Harddisk0\Partition3" />
+  <culture-info current-culture="en-GB" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Success" success="True" time="21.9104" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Module.Import.Tests.ps1" executed="True" result="Success" success="True" time="6.4908" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Module.Import.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Monkey365 module import contract" executed="True" result="Success" success="True" time="6.106" asserts="0" description="Monkey365 module import contract">
+            <results>
+              <test-case description="imports successfully from its manifest" name="Monkey365 module import contract.imports successfully from its manifest" time="6.0622" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Module.Manifest.Tests.ps1" executed="True" result="Success" success="True" time="0.2066" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Module.Manifest.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Monkey365 module manifest contract" executed="True" result="Success" success="True" time="0.1605" asserts="0" description="Monkey365 module manifest contract">
+            <results>
+              <test-case description="passes Test-ModuleManifest" name="Monkey365 module manifest contract.passes Test-ModuleManifest" time="0.1373" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="references an existing root module" name="Monkey365 module manifest contract.references an existing root module" time="0.007" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="has valid release metadata" name="Monkey365 module manifest contract.has valid release metadata" time="0.0091" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Monkey365.Config.Tests.ps1" executed="True" result="Success" success="True" time="0.1653" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\Monkey365.Config.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Monkey365 configuration contract" executed="True" result="Success" success="True" time="0.1132" asserts="0" description="Monkey365 configuration contract">
+            <results>
+              <test-case description="is valid JSON" name="Monkey365 configuration contract.is valid JSON" time="0.0096" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="uses valid positive performance settings" name="Monkey365 configuration contract.uses valid positive performance settings" time="0.0121" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="references an existing rules directory" name="Monkey365 configuration contract.references an existing rules directory" time="0.0068" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="contains unique, non-empty Microsoft Graph scopes" name="Monkey365 configuration contract.contains unique, non-empty Microsoft Graph scopes" time="0.0141" asserts="0" success="True" result="Success" executed="True" />
+              <test-suite type="ParameterizedTest" name="Monkey365 configuration contract.contains the required top-level section &lt;_&gt;" executed="True" result="Success" success="True" time="0.0465" asserts="0" description="contains the required top-level section &lt;_&gt;">
+                <results>
+                  <test-case description="contains the required top-level section httpSettings" name="Monkey365 configuration contract.contains the required top-level section httpSettings" time="0.014" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section performance" name="Monkey365 configuration contract.contains the required top-level section performance" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section htmlSettings" name="Monkey365 configuration contract.contains the required top-level section htmlSettings" time="0.0037" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section ruleSettings" name="Monkey365 configuration contract.contains the required top-level section ruleSettings" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section logging" name="Monkey365 configuration contract.contains the required top-level section logging" time="0.0039" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section o365" name="Monkey365 configuration contract.contains the required top-level section o365" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section entraId" name="Monkey365 configuration contract.contains the required top-level section entraId" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="contains the required top-level section resourceManager" name="Monkey365 configuration contract.contains the required top-level section resourceManager" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="ParameterizedTest" name="Monkey365 configuration contract.references an existing default ruleset &lt;_&gt;" executed="True" result="Success" success="True" time="0.0124" asserts="0" description="references an existing default ruleset &lt;_&gt;">
+                <results>
+                  <test-case description="references an existing default ruleset azureDefaultRuleset" name="Monkey365 configuration contract.references an existing default ruleset azureDefaultRuleset" time="0.0079" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="references an existing default ruleset m365DefaultRuleset" name="Monkey365 configuration contract.references an existing default ruleset m365DefaultRuleset" time="0.0045" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\PublicApi.Tests.ps1" executed="True" result="Success" success="True" time="2.1393" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\contract\PublicApi.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Monkey365 public API contract" executed="True" result="Success" success="True" time="2.0948" asserts="0" description="Monkey365 public API contract">
+            <results>
+              <test-case description="exports only the supported public functions" name="Monkey365 public API contract.exports only the supported public functions" time="0.0138" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="exposes Invoke-Monkey365 as an advanced function" name="Monkey365 public API contract.exposes Invoke-Monkey365 as an advanced function" time="0.0182" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\core\ConvertTo-MonkeyObject.Tests.ps1" executed="True" result="Success" success="True" time="2.2472" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\core\ConvertTo-MonkeyObject.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="ConvertTo-MonkeyObject" executed="True" result="Success" success="True" time="2.2028" asserts="0" description="ConvertTo-MonkeyObject">
+            <results>
+              <test-case description="converts dictionary entries to a synchronized hashtable" name="ConvertTo-MonkeyObject.converts dictionary entries to a synchronized hashtable" time="0.049" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeycloudutils\MonkeyCloudUtils.Tests.ps1" executed="True" result="Success" success="True" time="0.2389" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeycloudutils\MonkeyCloudUtils.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyCloudUtils" executed="True" result="Success" success="True" time="0.1912" asserts="0" description="MonkeyCloudUtils">
+            <results>
+              <test-case description="decodes a JWT payload without contacting an external service" name="MonkeyCloudUtils.decodes a JWT payload without contacting an external service" time="0.0129" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="returns the Azure US Government endpoints" name="MonkeyCloudUtils.returns the Azure US Government endpoints" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="selects the initial verified tenant domain" name="MonkeyCloudUtils.selects the initial verified tenant domain" time="0.0091" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="builds tenant-specific SharePoint URLs" name="MonkeyCloudUtils.builds tenant-specific SharePoint URLs" time="0.0082" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="validates a tenant GUID" name="MonkeyCloudUtils.validates a tenant GUID" time="0.0092" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\AssetsAndMetadata.Tests.ps1" executed="True" result="Success" success="True" time="1.0955" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\AssetsAndMetadata.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML assets and metadata rendering" executed="True" result="Success" success="True" time="1.034" asserts="0" description="MonkeyHTML assets and metadata rendering">
+            <results>
+              <test-suite type="TestFixture" name="MonkeyHTML assets and metadata rendering.Icon resolution" executed="True" result="Success" success="True" time="0.2325" asserts="0" description="MonkeyHTML assets and metadata rendering.Icon resolution">
+                <results>
+                  <test-case description="maps known Fabric icon names and provides a fallback" name="MonkeyHTML assets and metadata rendering.Icon resolution.maps known Fabric icon names and provides a fallback" time="0.0178" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="resolves known and fallback SVG icons in local mode" name="MonkeyHTML assets and metadata rendering.Icon resolution.resolves known and fallback SVG icons in local mode" time="0.0252" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="resolves assets against a local CDN repository" name="MonkeyHTML assets and metadata rendering.Icon resolution.resolves assets against a local CDN repository" time="0.0066" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="converts branch-hosted SVG assets through jsDelivr" name="MonkeyHTML assets and metadata rendering.Icon resolution.converts branch-hosted SVG assets through jsDelivr" time="0.1452" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="warns when raw local SVG content is missing" name="MonkeyHTML assets and metadata rendering.Icon resolution.warns when raw local SVG content is missing" time="0.0336" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML assets and metadata rendering.Get-JSHelper" executed="True" result="Success" success="True" time="0.3082" asserts="0" description="MonkeyHTML assets and metadata rendering.Get-JSHelper">
+                <results>
+                  <test-case description="creates local helper tags with attributes and text" name="MonkeyHTML assets and metadata rendering.Get-JSHelper.creates local helper tags with attributes and text" time="0.0392" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="creates local-CDN helper URLs from the repository" name="MonkeyHTML assets and metadata rendering.Get-JSHelper.creates local-CDN helper URLs from the repository" time="0.0095" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="converts branch helper URLs through jsDelivr" name="MonkeyHTML assets and metadata rendering.Get-JSHelper.converts branch helper URLs through jsDelivr" time="0.0222" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML assets and metadata rendering.Finding card metadata" executed="True" result="Success" success="True" time="0.5246" asserts="0" description="MonkeyHTML assets and metadata rendering.Finding card metadata">
+                <results>
+                  <test-case description="renders Markdown content as escaped HTML text" name="MonkeyHTML assets and metadata rendering.Finding card metadata.renders Markdown content as escaped HTML text" time="0.0487" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="renders references as external links" name="MonkeyHTML assets and metadata rendering.Finding card metadata.renders references as external links" time="0.0369" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="renders structured and string compliance entries" name="MonkeyHTML assets and metadata rendering.Finding card metadata.renders structured and string compliance entries" time="0.0593" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="renders failed finding identity, severity, status, compliance, and violation count" name="MonkeyHTML assets and metadata rendering.Finding card metadata.renders failed finding identity, severity, status, compliance, and violation count" time="0.0547" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="omits violation count for passing findings" name="MonkeyHTML assets and metadata rendering.Finding card metadata.omits violation count for passing findings" time="0.0131" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Components.Tests.ps1" executed="True" result="Success" success="True" time="0.5378" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Components.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML reusable components" executed="True" result="Success" success="True" time="0.4867" asserts="0" description="MonkeyHTML reusable components">
+            <results>
+              <test-suite type="TestFixture" name="MonkeyHTML reusable components.New-HtmlCard" executed="True" result="Success" success="True" time="0.0654" asserts="0" description="MonkeyHTML reusable components.New-HtmlCard">
+                <results>
+                  <test-case description="builds a complete card with semantic sections" name="MonkeyHTML reusable components.New-HtmlCard.builds a complete card with semantic sections" time="0.0385" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="imports XML document and element content into card sections" name="MonkeyHTML reusable components.New-HtmlCard.imports XML document and element content into card sections" time="0.0099" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="groups body and footer in a collapsible region" name="MonkeyHTML reusable components.New-HtmlCard.groups body and footer in a collapsible region" time="0.0135" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML reusable components.New-HtmlContainerCard" executed="True" result="Success" success="True" time="0.1158" asserts="0" description="MonkeyHTML reusable components.New-HtmlContainerCard">
+                <results>
+                  <test-case description="builds a titled container with category and icon" name="MonkeyHTML reusable components.New-HtmlContainerCard.builds a titled container with category and icon" time="0.0242" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="appends XML documents, elements, and text to its body" name="MonkeyHTML reusable components.New-HtmlContainerCard.appends XML documents, elements, and text to its body" time="0.0112" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="uses an image with accessible alternate text" name="MonkeyHTML reusable components.New-HtmlContainerCard.uses an image with accessible alternate text" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML reusable components.New-HtmlModal" executed="True" result="Success" success="True" time="0.1865" asserts="0" description="MonkeyHTML reusable components.New-HtmlModal">
+                <results>
+                  <test-case description="builds an accessible static modal with content and controls" name="MonkeyHTML reusable components.New-HtmlModal.builds an accessible static modal with content and controls" time="0.0365" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="applies size and custom classes and can remove animation" name="MonkeyHTML reusable components.New-HtmlModal.applies size and custom classes and can remove animation" time="0.0309" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML reusable components.New-HTMLTab" executed="True" result="Success" success="True" time="0.2225" asserts="0" description="MonkeyHTML reusable components.New-HTMLTab">
+                <results>
+                  <test-case description="creates the default details and resources tabs with linked panes" name="MonkeyHTML reusable components.New-HTMLTab.creates the default details and resources tabs with linked panes" time="0.0172" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="creates custom tabs and applies component classes" name="MonkeyHTML reusable components.New-HTMLTab.creates custom tabs and applies component classes" time="0.0155" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Convert-ComplianceToSpanTag.Tests.ps1" executed="True" result="Success" success="True" time="0.4102" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Convert-ComplianceToSpanTag.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Convert-ComplianceToSpanTag" executed="True" result="Success" success="True" time="0.362" asserts="0" description="Convert-ComplianceToSpanTag">
+            <results>
+              <test-suite type="TestFixture" name="Convert-ComplianceToSpanTag.When Compliance is a valid object with all properties" executed="True" result="Success" success="True" time="0.0437" asserts="0" description="Convert-ComplianceToSpanTag.When Compliance is a valid object with all properties">
+                <results>
+                  <test-case description="should call New-HtmlTag for name, version, and reference" name="Convert-ComplianceToSpanTag.When Compliance is a valid object with all properties.should call New-HtmlTag for name, version, and reference" time="0.0396" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Convert-ComplianceToSpanTag.When Compliance is a string" executed="True" result="Success" success="True" time="0.0604" asserts="0" description="Convert-ComplianceToSpanTag.When Compliance is a string">
+                <results>
+                  <test-case description="should call New-HtmlTag with the string value" name="Convert-ComplianceToSpanTag.When Compliance is a string.should call New-HtmlTag with the string value" time="0.0094" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="Convert-ComplianceToSpanTag.When Compliance is an empty object" executed="True" result="Success" success="True" time="0.0721" asserts="0" description="Convert-ComplianceToSpanTag.When Compliance is an empty object">
+                <results>
+                  <test-case description="should not call New-HtmlTag" name="Convert-ComplianceToSpanTag.When Compliance is an empty object.should not call New-HtmlTag" time="0.0083" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-case description="should use the provided template" name="Convert-ComplianceToSpanTag.should use the provided template" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-DonutChartOption.Tests.ps1" executed="True" result="Success" success="True" time="0.4075" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-DonutChartOption.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-DonutChartOption Tests" executed="True" result="Success" success="True" time="0.3626" asserts="0" description="Get-DonutChartOption Tests">
+            <results>
+              <test-case description="Generates default donut chart options" name="Get-DonutChartOption Tests.Generates default donut chart options" time="0.0296" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Processes Labels parameter correctly" name="Get-DonutChartOption Tests.Processes Labels parameter correctly" time="0.0166" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Processes Colors parameter correctly" name="Get-DonutChartOption Tests.Processes Colors parameter correctly" time="0.0073" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Processes Data parameter correctly" name="Get-DonutChartOption Tests.Processes Data parameter correctly" time="0.006" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Uses provided Id parameter" name="Get-DonutChartOption Tests.Uses provided Id parameter" time="0.0046" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Generates default Id when Id parameter is not provided" name="Get-DonutChartOption Tests.Generates default Id when Id parameter is not provided" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Generates valid JavaScript output" name="Get-DonutChartOption Tests.Generates valid JavaScript output" time="0.0062" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-PolarAreaChartOption.Tests.ps1" executed="True" result="Success" success="True" time="0.3643" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-PolarAreaChartOption.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-PolarAreaChartOption Tests" executed="True" result="Success" success="True" time="0.3229" asserts="0" description="Get-PolarAreaChartOption Tests">
+            <results>
+              <test-case description="Returns valid chart options with no parameters" name="Get-PolarAreaChartOption Tests.Returns valid chart options with no parameters" time="0.0172" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles Data parameter correctly" name="Get-PolarAreaChartOption Tests.Handles Data parameter correctly" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles Labels parameter correctly" name="Get-PolarAreaChartOption Tests.Handles Labels parameter correctly" time="0.0065" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles Colors parameter correctly" name="Get-PolarAreaChartOption Tests.Handles Colors parameter correctly" time="0.0064" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Generates a unique Id when Id parameter is not provided" name="Get-PolarAreaChartOption Tests.Generates a unique Id when Id parameter is not provided" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Uses provided Id when Id parameter is specified" name="Get-PolarAreaChartOption Tests.Uses provided Id when Id parameter is specified" time="0.0044" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles all parameters together correctly" name="Get-PolarAreaChartOption Tests.Handles all parameters together correctly" time="0.0087" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Replaces placeholders for Labels and Colors correctly" name="Get-PolarAreaChartOption Tests.Replaces placeholders for Labels and Colors correctly" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Cleans up resources in the End block" name="Get-PolarAreaChartOption Tests.Cleans up resources in the End block" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-StackedBarChartOption.Tests.ps1" executed="True" result="Success" success="True" time="0.3663" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Get-StackedBarChartOption.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Get-StackedBarChartOption Tests" executed="True" result="Success" success="True" time="0.3214" asserts="0" description="Get-StackedBarChartOption Tests">
+            <results>
+              <test-case description="Generates valid JavaScript for a basic stacked bar chart" name="Get-StackedBarChartOption Tests.Generates valid JavaScript for a basic stacked bar chart" time="0.014" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Correctly sets x-axis categories from Labels parameter" name="Get-StackedBarChartOption Tests.Correctly sets x-axis categories from Labels parameter" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Sets horizontal orientation when Horizontal switch is used" name="Get-StackedBarChartOption Tests.Sets horizontal orientation when Horizontal switch is used" time="0.0097" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Assigns a custom chart ID when Id parameter is provided" name="Get-StackedBarChartOption Tests.Assigns a custom chart ID when Id parameter is provided" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Generates a unique chart ID when Id parameter is not provided" name="Get-StackedBarChartOption Tests.Generates a unique chart ID when Id parameter is not provided" time="0.0046" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles empty Labels gracefully" name="Get-StackedBarChartOption Tests.Handles empty Labels gracefully" time="0.0125" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles empty Data gracefully" name="Get-StackedBarChartOption Tests.Handles empty Data gracefully" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles missing optional parameters correctly" name="Get-StackedBarChartOption Tests.Handles missing optional parameters correctly" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Modals.Tests.ps1" executed="True" result="Success" success="True" time="0.4085" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Modals.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML specialized modals" executed="True" result="Success" success="True" time="0.3677" asserts="0" description="MonkeyHTML specialized modals">
+            <results>
+              <test-case description="creates an error modal with the error icon and requested identity" name="MonkeyHTML specialized modals.creates an error modal with the error icon and requested identity" time="0.0132" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="serializes raw objects into a formatted code block" name="MonkeyHTML specialized modals.serializes raw objects into a formatted code block" time="0.0203" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="generates an identity when a raw modal id is omitted" name="MonkeyHTML specialized modals.generates an identity when a raw modal id is omitted" time="0.0189" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="collects standard and finding-specific modals" name="MonkeyHTML specialized modals.collects standard and finding-specific modals" time="0.0614" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-FindingByServiceChart.Tests.ps1" executed="True" result="Success" success="True" time="0.4245" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-FindingByServiceChart.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-FindingByServiceChart Tests" executed="True" result="Success" success="True" time="0.3716" asserts="0" description="New-FindingByServiceChart Tests">
+            <results>
+              <test-case description="Generates a chart with valid input" name="New-FindingByServiceChart Tests.Generates a chart with valid input" time="0.0634" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles HorizontalStackedBar switch correctly" name="New-FindingByServiceChart Tests.Handles HorizontalStackedBar switch correctly" time="0.0148" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Returns warning when no findings are present" name="New-FindingByServiceChart Tests.Returns warning when no findings are present" time="0.0074" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles invalid input gracefully" name="New-FindingByServiceChart Tests.Handles invalid input gracefully" time="0.0047" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-FindingBySeverityChart.Tests.ps1" executed="True" result="Success" success="True" time="0.727" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-FindingBySeverityChart.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-FindingBySeverityChart" executed="True" result="Success" success="True" time="0.6296" asserts="0" description="New-FindingBySeverityChart">
+            <results>
+              <test-case description="Creates a polar area chart by default" name="New-FindingBySeverityChart.Creates a polar area chart by default" time="0.0617" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Creates a donut chart when specified" name="New-FindingBySeverityChart.Creates a donut chart when specified" time="0.0389" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Filters out 'good' and 'manual' levels" name="New-FindingBySeverityChart.Filters out 'good' and 'manual' levels" time="0.0265" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Creates correct chart structure" name="New-FindingBySeverityChart.Creates correct chart structure" time="0.0419" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles missing template gracefully" name="New-FindingBySeverityChart.Handles missing template gracefully" time="0.0294" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Reports a warning when chart creation fails" name="New-FindingBySeverityChart.Reports a warning when chart creation fails" time="0.0293" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Sets correct card title and icon" name="New-FindingBySeverityChart.Sets correct card title and icon" time="0.0292" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Handles empty input data gracefully" name="New-FindingBySeverityChart.Handles empty input data gracefully" time="0.0194" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-HtmlTag.Tests.ps1" executed="True" result="Success" success="True" time="0.4822" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\New-HtmlTag.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="New-HtmlTag Tests" executed="True" result="Success" success="True" time="0.4205" asserts="0" description="New-HtmlTag Tests">
+            <results>
+              <test-case description="Creates a tag with the correct name" name="New-HtmlTag Tests.Creates a tag with the correct name" time="0.0079" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Sets attributes correctly" name="New-HtmlTag Tests.Sets attributes correctly" time="0.0112" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Adds class names correctly" name="New-HtmlTag Tests.Adds class names correctly" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Sets the ID correctly" name="New-HtmlTag Tests.Sets the ID correctly" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Adds inner text correctly" name="New-HtmlTag Tests.Adds inner text correctly" time="0.0056" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Adds text as a text node by default" name="New-HtmlTag Tests.Adds text as a text node by default" time="0.0132" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Appends objects correctly" name="New-HtmlTag Tests.Appends objects correctly" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="Marks the tag as empty when Empty switch is used" name="New-HtmlTag Tests.Marks the tag as empty when Empty switch is used" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\ObjectMappings.Tests.ps1" executed="True" result="Success" success="True" time="0.6617" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\ObjectMappings.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML semantic mappings" executed="True" result="Success" success="True" time="0.5983" asserts="0" description="MonkeyHTML semantic mappings">
+            <results>
+              <test-suite type="ParameterizedTest" name="MonkeyHTML semantic mappings.maps severity &lt;Value&gt; to color &lt;Expected&gt;" executed="True" result="Success" success="True" time="0.0419" asserts="0" description="maps severity &lt;Value&gt; to color &lt;Expected&gt;">
+                <results>
+                  <test-case description="maps severity Info to color monkey-info" name="MonkeyHTML semantic mappings.maps severity Info to color monkey-info" time="0.011" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity low to color monkey-low" name="MonkeyHTML semantic mappings.maps severity low to color monkey-low" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity MEDIUM to color monkey-warning" name="MonkeyHTML semantic mappings.maps severity MEDIUM to color monkey-warning" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity high to color monkey-danger" name="MonkeyHTML semantic mappings.maps severity high to color monkey-danger" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity critical to color monkey-critical" name="MonkeyHTML semantic mappings.maps severity critical to color monkey-critical" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity unknown to color monkey-unknown" name="MonkeyHTML semantic mappings.maps severity unknown to color monkey-unknown" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity unexpected to color monkey-unknown" name="MonkeyHTML semantic mappings.maps severity unexpected to color monkey-unknown" time="0.0058" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="ParameterizedTest" name="MonkeyHTML semantic mappings.maps severity &lt;Value&gt; to icon &lt;Expected&gt;" executed="True" result="Success" success="True" time="0.0475" asserts="0" description="maps severity &lt;Value&gt; to icon &lt;Expected&gt;">
+                <results>
+                  <test-case description="maps severity medium to icon finding-badge-warning" name="MonkeyHTML semantic mappings.maps severity medium to icon finding-badge-warning" time="0.0133" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity info to icon finding-badge-info" name="MonkeyHTML semantic mappings.maps severity info to icon finding-badge-info" time="0.005" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity low to icon finding-badge-low" name="MonkeyHTML semantic mappings.maps severity low to icon finding-badge-low" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity good to icon finding-badge-good" name="MonkeyHTML semantic mappings.maps severity good to icon finding-badge-good" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity high to icon finding-badge-danger" name="MonkeyHTML semantic mappings.maps severity high to icon finding-badge-danger" time="0.005" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity critical to icon finding-badge-critical" name="MonkeyHTML semantic mappings.maps severity critical to icon finding-badge-critical" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity manual to icon finding-badge-manual" name="MonkeyHTML semantic mappings.maps severity manual to icon finding-badge-manual" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity unexpected to icon finding-badge-unknown" name="MonkeyHTML semantic mappings.maps severity unexpected to icon finding-badge-unknown" time="0.0048" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="ParameterizedTest" name="MonkeyHTML semantic mappings.maps severity &lt;Value&gt; to badge &lt;Expected&gt;" executed="True" result="Success" success="True" time="0.042" asserts="0" description="maps severity &lt;Value&gt; to badge &lt;Expected&gt;">
+                <results>
+                  <test-case description="maps severity medium to badge badge-warning" name="MonkeyHTML semantic mappings.maps severity medium to badge badge-warning" time="0.0118" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity info to badge badge-info" name="MonkeyHTML semantic mappings.maps severity info to badge badge-info" time="0.0053" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity low to badge badge-low" name="MonkeyHTML semantic mappings.maps severity low to badge badge-low" time="0.0052" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity good to badge badge-success" name="MonkeyHTML semantic mappings.maps severity good to badge badge-success" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity high to badge badge-danger" name="MonkeyHTML semantic mappings.maps severity high to badge badge-danger" time="0.005" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity critical to badge badge-critical" name="MonkeyHTML semantic mappings.maps severity critical to badge badge-critical" time="0.005" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps severity unexpected to badge badge-unknown" name="MonkeyHTML semantic mappings.maps severity unexpected to badge badge-unknown" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="ParameterizedTest" name="MonkeyHTML semantic mappings.maps status &lt;Value&gt; to badge &lt;Expected&gt;" executed="True" result="Success" success="True" time="0.0259" asserts="0" description="maps status &lt;Value&gt; to badge &lt;Expected&gt;">
+                <results>
+                  <test-case description="maps status pass to badge badge-success" name="MonkeyHTML semantic mappings.maps status pass to badge badge-success" time="0.0072" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps status FAIL to badge badge-danger" name="MonkeyHTML semantic mappings.maps status FAIL to badge badge-danger" time="0.0088" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps status manual to badge badge-manual" name="MonkeyHTML semantic mappings.maps status manual to badge badge-manual" time="0.005" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="maps status unknown to badge badge-unknown" name="MonkeyHTML semantic mappings.maps status unknown to badge badge-unknown" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Tables.Tests.ps1" executed="True" result="Success" success="True" time="0.5851" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Tables.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML table rendering" executed="True" result="Success" success="True" time="0.5282" asserts="0" description="MonkeyHTML table rendering">
+            <results>
+              <test-case description="renders object properties as headers and rows" name="MonkeyHTML table rendering.renders object properties as headers and rows" time="0.0506" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="decorates enabled, disabled, and missing values with semantic badges" name="MonkeyHTML table rendering.decorates enabled, disabled, and missing values with semantic badges" time="0.0304" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="renders list layout and highlights selected properties" name="MonkeyHTML table rendering.renders list layout and highlights selected properties" time="0.0188" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="generates a stable table id shape when none is supplied" name="MonkeyHTML table rendering.generates a stable table id shape when none is supplied" time="0.0093" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Utilities.Tests.ps1" executed="True" result="Success" success="True" time="0.5801" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyhtml\Utilities.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyHTML utilities" executed="True" result="Success" success="True" time="0.5161" asserts="0" description="MonkeyHTML utilities">
+            <results>
+              <test-suite type="TestFixture" name="MonkeyHTML utilities.Convert-UrlToJsDelivr" executed="True" result="Success" success="True" time="0.052" asserts="0" description="MonkeyHTML utilities.Convert-UrlToJsDelivr">
+                <results>
+                  <test-case description="uses main by default" name="MonkeyHTML utilities.Convert-UrlToJsDelivr.uses main by default" time="0.0184" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="uses an explicit branch" name="MonkeyHTML utilities.Convert-UrlToJsDelivr.uses an explicit branch" time="0.0054" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="uses an explicit tag" name="MonkeyHTML utilities.Convert-UrlToJsDelivr.uses an explicit tag" time="0.014" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="supports the latest release alias" name="MonkeyHTML utilities.Convert-UrlToJsDelivr.supports the latest release alias" time="0.0055" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="returns nothing for non-GitHub URLs" name="MonkeyHTML utilities.Convert-UrlToJsDelivr.returns nothing for non-GitHub URLs" time="0.0046" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML utilities.Format-PsObject" executed="True" result="Success" success="True" time="0.1083" asserts="0" description="MonkeyHTML utilities.Format-PsObject">
+                <results>
+                  <test-case description="represents null and empty values as NotSet" name="MonkeyHTML utilities.Format-PsObject.represents null and empty values as NotSet" time="0.0116" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="converts booleans to report-friendly labels" name="MonkeyHTML utilities.Format-PsObject.converts booleans to report-friendly labels" time="0.0059" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="HTML-escapes ordinary strings" name="MonkeyHTML utilities.Format-PsObject.HTML-escapes ordinary strings" time="0.0049" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="recursively formats dictionaries and objects" name="MonkeyHTML utilities.Format-PsObject.recursively formats dictionaries and objects" time="0.0142" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="preserves collections while formatting their items" name="MonkeyHTML utilities.Format-PsObject.preserves collections while formatting their items" time="0.0106" asserts="0" success="True" result="Success" executed="True" />
+                  <test-case description="preserves scalar numeric values" name="MonkeyHTML utilities.Format-PsObject.preserves scalar numeric values" time="0.0051" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+              <test-suite type="TestFixture" name="MonkeyHTML utilities.Update-XMLIndent" executed="True" result="Success" success="True" time="0.1287" asserts="0" description="MonkeyHTML utilities.Update-XMLIndent">
+                <results>
+                  <test-case description="returns indented XML without changing content" name="MonkeyHTML utilities.Update-XMLIndent.returns indented XML without changing content" time="0.0167" asserts="0" success="True" result="Success" executed="True" />
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyjob\MonkeyJob.Tests.ps1" executed="True" result="Success" success="True" time="0.1429" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\unit\modules\monkeyjob\MonkeyJob.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="MonkeyJob runspace primitives" executed="True" result="Success" success="True" time="0.0944" asserts="0" description="MonkeyJob runspace primitives">
+            <results>
+              <test-case description="creates a runspace pool" name="MonkeyJob runspace primitives.creates a runspace pool" time="0.0443" asserts="0" success="True" result="Success" executed="True" />
+              <test-case description="creates an initial session state" name="MonkeyJob runspace primitives.creates an initial session state" time="0.0125" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\smoke\Invoke-Monkey365.Tests.ps1" executed="True" result="Success" success="True" time="3.229" asserts="0" description="C:\GitHubCopilot\monkey365_redesign\monkey365\tests\smoke\Invoke-Monkey365.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="Invoke-Monkey365 credential-free smoke test" executed="True" result="Success" success="True" time="3.1785" asserts="0" description="Invoke-Monkey365 credential-free smoke test">
+            <results>
+              <test-case description="lists Azure collectors without authentication or network access" name="Invoke-Monkey365 credential-free smoke test.lists Azure collectors without authentication or network access" time="0.5059" asserts="0" success="True" result="Success" executed="True" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

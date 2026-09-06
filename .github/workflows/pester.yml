@@ -1,0 +1,56 @@
+name: Pester Tests
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pester-test:
+    name: Pester / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install Pester 6
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module Pester -RequiredVersion 6.0.0 -Scope CurrentUser -Force
+
+      - name: Run mandatory Pester suite
+        shell: pwsh
+        working-directory: ./tests
+        run: |
+          ./Invoke-Tests.ps1 `
+            -TestPath ./ `
+            -Summary `
+            -Output ../logs `
+            -CI `
+            -TestSuiteName monkey365-pester `
+            -CodeCoverage `
+            -CodeCoveragePath ../src/monkey365/core/modules/
+
+      - name: Publish test results
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: pester-results-${{ matrix.os }}
+          path: |
+            logs/pester-results.xml
+            logs/coverage.xml
+            logs/pester-summary.json
+            logs/pester-failures.json
+          if-no-files-found: warn

@@ -1,0 +1,53 @@
+name: PSScriptAnalyzer
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  security-events: write
+
+jobs:
+  static-analysis:
+    name: PSScriptAnalyzer
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Install PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Set-PSRepository PSGallery -InstallationPolicy Trusted
+          Install-Module PSScriptAnalyzer -MinimumVersion 1.23.0 -Scope CurrentUser -Force
+
+      - name: Run static analysis
+        shell: pwsh
+        run: |
+          ./tests/Invoke-Analyzer.ps1 `
+            -Path ./src/monkey365 `
+            -Recurse `
+            -OutputFormat SARIF `
+            -ModuleName monkey365 `
+            -Output ./logs/PSScriptAnalyzer.sarif `
+            -Force
+
+      - name: Upload results to GitHub code scanning
+        if: always()
+        uses: github/codeql-action/upload-sarif@v4
+        with:
+          sarif_file: logs/PSScriptAnalyzer.sarif
+
+      - name: Publish analyzer artifacts
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: psscriptanalyzer-results
+          path: logs/PSScriptAnalyzer.sarif
+          if-no-files-found: warn

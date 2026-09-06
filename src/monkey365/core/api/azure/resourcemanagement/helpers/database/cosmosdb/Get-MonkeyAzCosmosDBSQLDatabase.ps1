@@ -1,0 +1,98 @@
+﻿# Monkey365 - the PowerShell Cloud Security Tool for Azure and Microsoft 365 (copyright 2022) by Juan Garrido
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+Function Get-MonkeyAzCosmosDBSQLDatabase {
+    <#
+        .SYNOPSIS
+		Get SQL managed instance databases from Azure CosmosDB
+
+        .DESCRIPTION
+		Get SQL managed instance databases from Azure CosmosDB
+
+        .INPUTS
+
+        .OUTPUTS
+
+        .EXAMPLE
+
+        .NOTES
+	        Author		: Juan Garrido
+            Twitter		: @tr1ana
+            File Name	: Get-MonkeyAzCosmosDBSQLDatabase
+            Version     : 1.0
+
+        .LINK
+            https://github.com/silverhack/monkey365
+    #>
+
+	[CmdletBinding()]
+	Param (
+        [Parameter(Mandatory=$True, ValueFromPipeline = $True, HelpMessage="CosmosDB Object")]
+        [Object]$InputObject,
+
+        [parameter(Mandatory=$false, HelpMessage="API version")]
+        [String]$APIVersion = "2025-11-01-preview"
+    )
+    Process{
+        try{
+            $all_databases = [System.Collections.Generic.List[System.Object]]::new()
+            $p = @{
+			    Id = ($InputObject.Id).Substring(1);
+                Resource = "sqlDatabases";
+                ApiVersion = $APIVersion;
+                Verbose = $O365Object.verbose;
+                Debug = $O365Object.debug;
+                InformationAction = $O365Object.InformationAction;
+		    }
+		    $databases = Get-MonkeyAzObjectById @p
+            If($databases){
+                ForEach($database in $databases){
+                    $new_db = $database | New-MonkeyCosmosDBSQLDatabaseObject
+                    # Check if clientEncryptionKeys are present
+                    $p = @{
+			            Id = $new_db.id;
+                        Resource = "clientEncryptionKeys";
+                        ApiVersion = $APIVersion;
+                        Verbose = $O365Object.verbose;
+                        Debug = $O365Object.debug;
+                        InformationAction = $O365Object.InformationAction;
+		            }
+                    $new_db.clientEncryptionKeys = Get-MonkeyAzObjectById @p
+                    #Get containers
+                    $p = @{
+			            Id = $new_db.id;
+                        Resource = "containers";
+                        ApiVersion = $APIVersion;
+                        Verbose = $O365Object.verbose;
+                        Debug = $O365Object.debug;
+                        InformationAction = $O365Object.InformationAction;
+		            }
+                    $containers = Get-MonkeyAzObjectById @p
+                    If($containers){
+                        ForEach($container in @($containers)){
+                            [void]$new_db.containers.Add($container);
+                        }
+                    }
+                    #Add to array
+                    [void]$all_databases.Add($new_db);
+                }
+            }
+            #return object
+            Write-Output $all_databases -NoEnumerate
+        }
+        catch{
+            Write-Verbose $_
+        }
+    }
+}

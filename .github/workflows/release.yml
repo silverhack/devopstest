@@ -18,12 +18,11 @@ jobs:
         shell: pwsh
         run: |
           $manifest = Test-ModuleManifest -Path "./src/monkey365/monkey365.psd1"
-          $prerelease = $manifest.PrivateData.PSData['Prerelease']
-          If ($prerelease -and $prerelease.StartsWith('-')){
-              $version = ("{0}{1}" -f $manifest.version,$prerelease)
-          }
-          else{
-              $version = ("{0}-{1}" -f $manifest.version,$prerelease)
+          $version = $manifest.Version.ToString()
+          $prerelease = [string]$manifest.PrivateData.PSData['Prerelease']
+          If (-not [string]::IsNullOrWhiteSpace($prerelease)) {
+              $separator = If ($prerelease.StartsWith('-')) { '' } Else { '-' }
+              $version = ("{0}{1}{2}" -f $version, $separator, $prerelease)
           }
           $releaseName = ("Monkey365 v{0}" -f $version)
           "monkey365version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
@@ -31,21 +30,19 @@ jobs:
       - name: Get current date
         id: date
         run: echo "today=$(date +'%Y-%m-%d_%H%M%S')" >> $GITHUB_OUTPUT
-      - name: Set release
-        id: release_message
-        run: |
-          echo "message=Thanks for follow [Monkey365](https://github.com/silverhack/monkey365)!." >> $GITHUB_ENV
       - name: Create Release
         id: create_release
-        uses: comnoco/create-release-action@v2.0.5
+        run: >-
+          gh release create "$RELEASE_TAG"
+          --title "$RELEASE_NAME"
+          --notes "$RELEASE_NOTES"
+          --target "$GITHUB_SHA"
+          --draft
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
-        with:
-          tag_name: ${{ steps.monkey365version.outputs.monkey365version }}
-          release_name: ${{ steps.monkey365version.outputs.releasename }}
-          body: ${{ steps.release_message.outputs.message }}
-          draft: true
-          prerelease: false
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ steps.monkey365version.outputs.monkey365version }}
+          RELEASE_NAME: ${{ steps.monkey365version.outputs.releasename }}
+          RELEASE_NOTES: Thanks for following [Monkey365](https://github.com/silverhack/monkey365)!
       # Create a zip of the folder
       - name: Create ZIP file of the folder
         if: steps.create_release.outcome  == 'success'

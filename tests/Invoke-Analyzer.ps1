@@ -217,6 +217,21 @@ Begin{
         }
     }
 
+    Function ConvertTo-SarifLevel {
+        param(
+            [AllowNull()]
+            [Object]$Severity
+        )
+
+        switch ([System.String]$Severity) {
+            'Error'       { return 'error' }
+            'ParseError'  { return 'error' }
+            'Warning'     { return 'warning' }
+            'Information' { return 'note' }
+            default       { return 'none' }
+        }
+    }
+
     Function ConvertTo-SarifArtifact {
         param(
             [Parameter(Mandatory)]
@@ -245,7 +260,7 @@ Begin{
                             text = $_ | Select-Object -ExpandProperty Description
                         }
                         defaultConfiguration = [ordered]@{
-                            level = [System.String]$_.Severity
+                            level = ConvertTo-SarifLevel -Severity $_.Severity
                         }
                         properties = [ordered]@{
                             tags = @('PowerShell', 'PSScriptAnalyzer')
@@ -260,7 +275,7 @@ Begin{
             foreach ($record in $caseModel.Records) {
                 $result = [ordered]@{
                     ruleId = [System.String]$caseModel.Rule
-                    level = [System.String]$record.Severity
+                    level = ConvertTo-SarifLevel -Severity $record.Severity
                     message = [ordered]@{
                         text = [System.String]$record.Message
                     }

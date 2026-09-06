@@ -1,9 +1,9 @@
 site_name: Monkey365
-site_url: https://silverhack.github.io/monkey365/
+site_url: https://silverhack.github.io/devopstest/
 site_description: Monkey365
 site_author: Juan Garrido
 
-repo_url: https://github.com/silverhack/monkey365
+repo_url: https://silverhack.github.io/devopstest/
 edit_uri: blob/main/docs/docs/
 
 extra_css:

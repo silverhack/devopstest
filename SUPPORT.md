@@ -1,4 +1,4 @@
-# Support
+# Support   
 
 Monkey365 is an open-source project maintained by a solo developer. Community support is provided on a best-effort basis without guaranteed response or resolution times.
 
